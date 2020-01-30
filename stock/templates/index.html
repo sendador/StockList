@@ -1,0 +1,41 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>StockList</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
+<table class="table is-striped">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">
+          <div class="flex" style="display: flex;flex-direction: row;">Name
+                <form method="GET" style="margin-left:5px;">
+                    <select class="form-control input-sm" name="sort">
+                        <option value="asc">asc</option>
+                        <option value="desc">desc</option>
+                    </select>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </th>
+        <th scope="col">Code</th>
+        <th scope="col">Price</th>
+        <th scope="col">Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for stock in stock_list %}
+    <tr>
+        <th scope="row">{{ forloop.counter }}</th>
+        <td>{{ stock.company_name }}</td>
+        <td>{{ stock.company_code }}</td>
+        <td>{{ stock.stock_price }}</td>
+        <td>{{ stock.runtime_date }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
