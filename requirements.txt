@@ -17,7 +17,7 @@ requests==2.22.0
 six==1.14.0
 soupsieve==1.9.5
 sqlparse==0.3.0
-urllib3==1.25.8
+urllib3==1.26.5
 wrapt==1.11.2
 asgiref==3.2.3
 astroid==2.3.3
@@ -51,6 +51,6 @@ requests==2.22.0
 six==1.14.0
 soupsieve==1.9.5
 sqlparse==0.3.0
-urllib3==1.25.8
+urllib3==1.26.5
 wcwidth==0.1.8
 wrapt==1.11.2
